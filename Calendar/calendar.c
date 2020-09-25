@@ -50,6 +50,7 @@ int actionCalendar(char *name)
 	printf("Press another to exit\n");
 	scanf("%d",&action);
 	clear();
+	getchar();
 	return action;
 }
 //!loop do calendario
@@ -81,6 +82,7 @@ bool startCalendar(Calendar *c)
 //!imprime todo o calendario
 void printCalendar(Calendar*c)
 {
+	fflush(stdin);
 	printBirthdays(c->birthdays);
 	printMeets(c->meets);
 	printTasks(c->tasks);
@@ -110,6 +112,7 @@ short int getShortInt(char s[10000])
 	int integer;
 	printf("%s\n",s);
 	scanf("%d",&integer);
+	getchar();
 	return integer;
 }
 //!verifica se horario esta no range permitido

@@ -12,6 +12,7 @@ Manager *newManager()
 int actionManager()
 {
 	int action;
+	fflush(stdin);
 	clear();
 	printf("Put your action:\n");
 	printf("1-List All Users\n");
@@ -20,6 +21,7 @@ int actionManager()
 	printf("Press another to exit\n");
 	scanf("%d",&action);
 	clear();
+	getchar();
 	return action;
 }
 //loop do manager
